@@ -26,9 +26,9 @@ This approach can be used on both holonomic and omnidirectional mobile manipualt
 
 ## How do I use it?
 
-We have a created a robotics Python library called [Robotics Toolbox for Python](https://github.com/petercorke/robotics-toolbox-python) which allows our algorithm to be used an any robot. We use the library [qpsolvers](https://pypi.org/project/qpsolvers/) to solve the optimisation function. However, you can use whichever solver you wish. The following examples uses our Swift [Swift](https://github.com/jhavl/swift) simulator.
+We have a created a robotics Python library called [Robotics Toolbox for Python](https://github.com/petercorke/robotics-toolbox-python) which allows our algorithm to be used an any robot. The following examples uses our [Swift](https://github.com/jhavl/swift) simulator.
 
-Install [Robotics Toolbox for Python](https://github.com/petercorke/robotics-toolbox-python) and Swift [Swift](https://github.com/jhavl/swift) using
+Install [Robotics Toolbox for Python](https://github.com/petercorke/robotics-toolbox-python) and [Swift](https://github.com/jhavl/swift) using
 
 ```shell
 pip3 install roboticstoolbox-python
@@ -51,9 +51,8 @@ pip3 install roboticstoolbox-python
 If you use this work, please cite:
 
 ```
-@article{haviland2020neo,
+@article{haviland2021holistic,
   author={J. {Haviland} and P. {Corke}},
-  journal={IEEE Robotics and Automation Letters}, 
   title={NEO: A Novel Expeditious Optimisation Algorithm for Reactive Motion Control of Manipulators}, 
   year={2021},
   volume={6},
