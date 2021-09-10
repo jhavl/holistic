@@ -1,5 +1,5 @@
-## NEO: A Novel Expeditious Optimisation Algorithm for Reactive Motion Control of Manipulators 
-## [See project website](https://jhavl.github.io/neo)
-### _Jesse Haviland and Peter Corke_
+## A Holistic Approach to Reactive Mobile Manipulation 
+## [See project website](https://jhavl.github.io/holistic)
+### _Jesse Haviland, Niko Sünderhauf, and Peter Corke_
 
 
