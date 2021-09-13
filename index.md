@@ -61,6 +61,6 @@ If you use this work, please cite:
 
 ### Acknowledgements
 
-This research was supported by the Queensland Universilty of Technology Centre for Robotics (QCR).
+This research was supported by the Queensland Universilty of Technology Centre for Robotics ([QCR](https://research.qut.edu.au/qcr/)).
 
 ![thanks](/images/qcr.png)
