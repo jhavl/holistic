@@ -6,7 +6,7 @@ description: A Holistic Approach to Reactive Mobile Manipulation
 ### _Jesse Haviland, Niko Sünderhauf, and Peter Corke_
 
 
-**[Preprint Avaliable Here](https://arxiv.org/abs/2010.08686)**
+**[Preprint Avaliable Here](https://arxiv.org/abs/2109.04749)**
 
 
 
@@ -52,13 +52,10 @@ If you use this work, please cite:
 
 ```
 @article{haviland2021holistic,
-  author={J. {Haviland} and P. {Corke}},
-  title={NEO: A Novel Expeditious Optimisation Algorithm for Reactive Motion Control of Manipulators}, 
-  year={2021},
-  volume={6},
-  number={2},
-  pages={1043-1050},
-  doi={10.1109/LRA.2021.3056060}}
+  author={J. {Haviland} and N. {Sünderhauf} and P. {Corke}},
+  title={A Holistic Approach to Reactive Mobile Manipulation},
+  journal={arXiv preprint arXiv:2109.04749},
+  year={2021}
 }
 ```
 
