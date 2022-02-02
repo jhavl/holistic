@@ -5,9 +5,11 @@ description: A Holistic Approach to Reactive Mobile Manipulation
 
 ### _Jesse Haviland, Niko Sünderhauf, and Peter Corke_
 
+IEEE Robotics and Automation Letters (RA-L), accepted January 2022.
 
 **[Preprint Avaliable Here](https://arxiv.org/abs/2109.04749)**
 
+**[IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/9695298)**
 
 
 ![Cover Image](/images/cover_mm.svg)
@@ -287,11 +289,13 @@ env.hold()
 If you use this work, please cite:
 
 ```
-@article{haviland2021holistic,
+@article{haviland2022holistic,
   author={J. {Haviland} and N. {Sünderhauf} and P. {Corke}},
+  journal={IEEE Robotics and Automation Letters}, 
   title={A Holistic Approach to Reactive Mobile Manipulation},
-  journal={arXiv preprint arXiv:2109.04749},
-  year={2021}
+  year={2022},
+  pages={1-1},
+  doi={10.1109/LRA.2022.3146554}}
 }
 ```
 
