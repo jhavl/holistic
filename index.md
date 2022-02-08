@@ -294,7 +294,9 @@ If you use this work, please cite:
   journal={IEEE Robotics and Automation Letters}, 
   title={A Holistic Approach to Reactive Mobile Manipulation},
   year={2022},
-  pages={1-1},
+  volume={7},
+  number={2},
+  pages={3122-3129},
   doi={10.1109/LRA.2022.3146554}}
 }
 ```
