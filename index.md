@@ -47,9 +47,9 @@ import numpy as np
 import math
 
 
-def step_robot(r, Tep):
+def step_robot(r: rtb.ERobot, Tep):
 
-    wTe = r.fkine(r.q, fast=True)
+    wTe = r.fkine(r.q)
 
     eTep = np.linalg.inv(wTe) @ Tep
 
@@ -74,7 +74,7 @@ def step_robot(r, Tep):
     v[3:] *= 1.3
 
     # The equality contraints
-    Aeq = np.c_[r.jacobe(r.q, fast=True), np.eye(6)]
+    Aeq = np.c_[r.jacobe(r.q), np.eye(6)]
     beq = v.reshape((6,))
 
     # The inequality constraints for joint limit avoidance
@@ -99,7 +99,7 @@ def step_robot(r, Tep):
 
     # Get base to face end-effector
     kε = 0.5
-    bTe = r.fkine(r.q, include_base=False, fast=True)
+    bTe = r.fkine(r.q, include_base=False).A
     θε = math.atan2(bTe[1, -1], bTe[0, -1])
     ε = kε * θε
     c[0] = -ε
@@ -142,7 +142,7 @@ wTep = frankie.fkine(frankie.q) * sm.SE3.Rz(np.pi)
 wTep.A[:3, :3] = np.diag([-1, 1, -1])
 wTep.A[0, -1] -= 4.0
 wTep.A[2, -1] -= 0.25
-ax_goal.base = wTep
+ax_goal.T = wTep
 env.step()
 
 
@@ -152,8 +152,8 @@ while not arrived:
     env.step(dt)
 
     # Reset bases
-    base_new = frankie.fkine(frankie._q, end=frankie.links[2], fast=True)
-    frankie._base.A[:] = base_new
+    base_new = frankie.fkine(frankie._q, end=frankie.links[2])
+    frankie._T = base_new.A
     frankie.q[:2] = 0
 
 env.hold()
@@ -170,9 +170,9 @@ import numpy as np
 import math
 
 
-def step_robot(r, Tep):
+def step_robot(r: rtb.ERobot, Tep):
 
-    wTe = r.fkine(r.q, fast=True)
+    wTe = r.fkine(r.q)
 
     eTep = np.linalg.inv(wTe) @ Tep
 
@@ -197,7 +197,7 @@ def step_robot(r, Tep):
     v[3:] *= 1.3
 
     # The equality contraints
-    Aeq = np.c_[r.jacobe(r.q, fast=True), np.eye(6)]
+    Aeq = np.c_[r.jacobe(r.q), np.eye(6)]
     beq = v.reshape((6,))
 
     # The inequality constraints for joint limit avoidance
@@ -222,7 +222,7 @@ def step_robot(r, Tep):
 
     # Get base to face end-effector
     kε = 0.5
-    bTe = r.fkine(r.q, include_base=False, fast=True)
+    bTe = r.fkine(r.q, include_base=False).A
     θε = math.atan2(bTe[1, -1], bTe[0, -1])
     ε = kε * θε
     c[0] = -ε
@@ -265,7 +265,7 @@ wTep = frankie.fkine(frankie.q) * sm.SE3.Rz(np.pi)
 wTep.A[:3, :3] = np.diag([-1, 1, -1])
 wTep.A[0, -1] -= 4.0
 wTep.A[2, -1] -= 0.25
-ax_goal.base = wTep
+ax_goal.T = wTep
 env.step()
 
 
@@ -275,8 +275,8 @@ while not arrived:
     env.step(dt)
 
     # Reset bases
-    base_new = frankie.fkine(frankie._q, end=frankie.links[3], fast=True)
-    frankie._base.A[:] = base_new
+    base_new = frankie.fkine(frankie._q, end=frankie.links[3]).A
+    frankie._T = base_new
     frankie.q[:3] = 0
 
 env.hold()
