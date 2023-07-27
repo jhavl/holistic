@@ -3,7 +3,7 @@ title: Holistic MM
 description: A Holistic Approach to Reactive Mobile Manipulation
 ---
 
-### _Jesse Haviland, Niko Sünderhauf, and Peter Corke_
+### _[Jesse Haviland](https://jhavl.com/), Niko Sünderhauf, and [Peter Corke](https://petercorke.com/)_
 
 IEEE Robotics and Automation Letters (RA-L), accepted January 2022.
 
